@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <style>
+        .contain{
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .display{
+            border: 2px solid black;
+            width: 500px;
+            height: 80px;
+        }
+        .mini{
+            border-bottom: 2px solid black;
+            height: 30px;
+            font-size: 25px;
+        }
+        .main{
+            height: 50px;
+            font-size: 40px;
+        }
+        .buttons{
+            display: flex;
+            margin-top: 100px;
+            justify-content: center;
+        }
+        .operators{
+            display: flex;
+            margin-top: 50px;
+            justify-content: center;
+        }
+        .extra{
+            display: flex;
+            margin-top: 50px;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <div class="display">
+            <div class="mini"></div>
+            <div class="main"></div>
+        </div>
+    </div>
+    <div class="buttons">
+        <button class="buttons" id="btn" value="1">1</button>
+        <button class="buttons" id="btn" value="2">2</button>
+        <button class="buttons" id="btn" value="3">3</button>
+        <button class="buttons" id="btn" value="4">4</button>
+        <button class="buttons" id="btn" value="5">5</button>
+        <button class="buttons" id="btn" value="6">6</button>
+        <button class="buttons" id="btn" value="7">7</button>
+        <button class="buttons" id="btn" value="8">8</button>
+        <button class="buttons" id="btn" value="9">9</button>
+        <button class="buttons" id="btn" value="0">0</button>
+        <button class="buttons" id="op" value="+">+</button>
+        <button class="buttons" id="op" value="-">-</button>
+        <button class="buttons" id="op" value="*">*</button>
+        <button class="buttons" id="op" value="/">/</button>
+        <button class="buttons" id="clear" value="clear">clear</button>
+        <button class="buttons" id="equal" value="equals">equals</button>
+    </div>
+    <!--<div class="operators">
+        <button id="op" value="+">+</button>
+        <button id="op" value="-">-</button>
+        <button id="op" value="*">*</button>
+        <button id="op" value="/">/</button>
+    </div>-->
+    </div>
+</body>
+</html>
