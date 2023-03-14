@@ -20,20 +20,18 @@ const divide = (a,b) => {
 
 function equal(num1, sign, num2) {
     if(sign == '+'){
-        main.textContent = add(num1,num2)
-        answer = parseFloat(main.textContent)
+      answer = parseFloat(add(num1,num2))
+      console.log(answer)
+
     }
     else if(sign == '-'){
-        main.textContent = subtract(num1,num2)
-        answer = parseFloat(main.textContent)
+        answer = parseFloat(subtract(num1,num2))
     }
     else if(sign == '*'){
-        main.textContent = multiply(num1, num2)
-        answer = parseFloat(main.textContent)
+        answer = parseFloat(multiply(num1, num2))
     }
     else if(sign == '/'){
-        main.textContent = divide(num1,num2)
-        answer = parseFloat(main.textContent)
+        answer = parseFloat(divide(num1,num2))
     }
 }
 
@@ -70,6 +68,8 @@ buttons.forEach((button) => {
 
 equals.addEventListener('click',() => {
     equal(parseFloat(previousValue),operator,parseFloat(currentValue))
+    main.textContent = ''
+    main.textContent += answer
     mini.textContent =  previousValue + ' ' + operator + ' ' + currentValue
     
 })
@@ -77,21 +77,18 @@ equals.addEventListener('click',() => {
 
 operators.forEach((op) => {
     op.addEventListener('click', (o) => {
-        /*previousValue = arr.pop()
-        mini.textContent = previousValue
-        mini.textContent += ' ' + o.target.value
-        main.textContent = ''
-        operator = o.target.value*/
-        
         if(answer == 0){
             previousValue = arr.pop()
             mini.textContent = previousValue
             mini.textContent += ' ' + o.target.value
             main.textContent = ''
             operator = o.target.value
+            equal(parseFloat(previousValue),operator,parseFloat(currentValue))
+
         }
         else{
-            answer = previousValue
+            equal(parseFloat(previousValue),operator,parseFloat(currentValue))
+            previousValue = answer
             mini.textContent = previousValue
             mini.textContent += ' ' + o.target.value
             main.textContent = ''
