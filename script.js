@@ -51,14 +51,10 @@ buttons.forEach((button) => {
         clear.addEventListener('click', () => {
             main.textContent = ''
             mini.textContent = ''
+            previousValue = '0'
+            currentValue = '0'
         })
 
-        /*equals.addEventListener('click',() => {
-            equal(parseFloat(previousValue),operator,parseFloat(currentValue))
-            mini.textContent =  previousValue + ' ' + operator + ' ' + currentValue
-            
-        })*/
-        
         
     })
 
