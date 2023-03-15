@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator</title>
     <script src="script.js" defer></script>
     <style>
         .contain{
@@ -41,19 +41,29 @@
         #equal{
             width:400px;
             height: 70px;
+            font-size: 40px;
         }
         button:hover {
             background-color:lightpink;
+            font-size: 35px;
         }
         .buttons{
             border: 1px solid black;
             font-size:large;
             color: black;
+            font-size: 40px;
         }
         button{
             background-color:azure;
         }
-
+        #op{
+            font-size: 40px;
+        }
+        footer{
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+        }
     </style>
 </head>
 <body>
@@ -66,8 +76,8 @@
     <div class="grid">
         <button class="buttons" id="btn" value="9" style="border-left:2px solid black; border-top:2px solid black;">9</button>
         <button class="buttons" id="btn" value="8" style="border-top:2px solid black;">8</button>
-        <button class="buttons" id="btn" value="7" style="border-top:2px solid black;">7</button>
-        <button class="buttons" id="btn" value="6" style="border-top:2px solid black; border-right: 2px solid black;">6</button>
+        <button class="buttons" id="btn" value="7" style="border-top:2px solid black;">7</button> 
+        <button class="buttons" id="btn" value="6" style="border-top:2px solid black; border-right: 2px solid black;">6</button>       
         <button class="buttons" id="btn" value="5" style="border-left:2px solid black;">5</button>
         <button class="buttons" id="btn" value="4">4</button>
         <button class="buttons" id="btn" value="3">3</button>
@@ -79,8 +89,9 @@
         <button class="buttons" id="op" value="-" style="border-left:2px solid black;">-</button>
         <button class="buttons" id="op" value="*">*</button>
         <button class="buttons" id="op" value="/">/</button>
-        <button class="buttons" id="clear" value="clear" style="border-right:2px solid black;">clear</button>
+        <button class="buttons" id="clear" value="clear" style="border-right:2px solid black;">clr</button>
         <button class="buttons" id="equal" value="equals" style="border-left:2px solid black; border-bottom: 2px solid black; border-right: 2px solid black;">=</button>
     </div>
+    <footer> Darshan P &#169 2023</footer>
 </body>
 </html>
