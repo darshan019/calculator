@@ -51,8 +51,8 @@ buttons.forEach((button) => {
         clear.addEventListener('click', () => {
             main.textContent = ''
             mini.textContent = ''
-            previousValue = '0'
-            currentValue = '0'
+            previousValue = 0
+            currentValue = 0
         })
 
         
