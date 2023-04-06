@@ -5,6 +5,8 @@ let mini = document.querySelector('.mini')
 let equals = document.getElementById('equal')
 let clear = document.getElementById('clear')
 let answer = 0;
+let del = document.getElementById('del')
+
 
 const add = (a,b) => a+b
 const subtract = (a,b) => a-b
@@ -47,27 +49,31 @@ buttons.forEach((button) => {
         main.textContent += e.target.value;
         currentValue = parseFloat(main.textContent)
         arr.push(currentValue)
+        console.log(arr)
         
         clear.addEventListener('click', () => {
             main.textContent = ''
             mini.textContent = ''
             previousValue = 0
             currentValue = 0
-        })
-
-        
+            answer = 0
+            arr = []
+        })  
     })
-
-    
 })
 
+del.addEventListener('click', () => {
+    arr.pop()
+    let len = arr.length
+    currentValue = arr[len-1]
+    main.textContent = currentValue
+})
 
 equals.addEventListener('click',() => {
     equal(parseFloat(previousValue),operator,parseFloat(currentValue))
     main.textContent = ''
     main.textContent += answer
     mini.textContent =  previousValue + ' ' + operator + ' ' + currentValue
-    
 })
 
 
