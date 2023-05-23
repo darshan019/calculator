@@ -7,3 +7,5 @@ A functioning  basic calculator built using
 CSS is within HTML (as style tag) as it was easy accessing selectors
 
 -> Vannila Javascript
+
+live site: https://darshan019.github.io/calculator
